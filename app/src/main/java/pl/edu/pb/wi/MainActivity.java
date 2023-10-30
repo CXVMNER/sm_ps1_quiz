@@ -59,6 +59,7 @@ private void checkAnswerCorrectness(boolean userAnswer) {
 
     private void setNextQuestion() {
         if (currentIndex == questions.length - 1) {
+            questionTextView.setText(questions[currentIndex].getQuestionId());
             Toast.makeText(this, "Twój wynik to: " + score, Toast.LENGTH_LONG).show();
         } else {
             questionTextView.setText(questions[currentIndex].getQuestionId());
